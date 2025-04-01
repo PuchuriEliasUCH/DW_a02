@@ -95,7 +95,7 @@
                 clone.querySelector(".pasaje").innerHTML = `<li>Categoria: ${el.pasajes.categoria}</li>
                 <li>Precio: S/${el.pasajes.precio}</li>
                 <li>N. Boletos: ${el.pasajes.cantidad}</li>
-                <li>Beneficios: ${el.pasajes.descuento}</li>
+                <li>Beneficios: ${el.descuento}</li>
                 <li>Subtotal: ${el.subtotal}</li>
                 `;
                 clone.querySelector(".total").textContent = `Total: ${el.total}`
