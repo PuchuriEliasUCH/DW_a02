@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Venta de Boletos</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Venta de Boletos de Bus (Lima - Arequipa)</h1>
+    </header>
+    
+    <main>
+
+        <section>
+            <form action="#">
+                <div class="form_input">
+                    <label for="categoria">categoría</label> <br />
+                    <select id="categoria">
+                        <option value="1">Económico (S/ 50)</option>
+                        <option value="2">Semi-Cama (S/ 70)</option>
+                        <option value="3">Cama (S/ 90)</option>
+                        <option value="4">VIP (S/ 120)</option>
+                    </select>
+                </div>
+                <div class="form_input">
+                    <label for="cantidad">Cantidad</label> <br />
+                    <input type="number" id="cantidad" min="1" value="1" required>
+                </div>
+                <div id="stock" class="form_input">
+                    <p id="stock"></p>
+                </div>
+                <div class="form_input">
+                    <button type="submit" id="btn_comprar">Comprar Boletos</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="ventas">
+
+            <template id="temp_pasajes">
+                <article>
+                    <header>
+                        <h3 class="tipo"></h3>
+                    </header>
+                    <main>
+                        <ul class="pasaje"></ul>
+                    </main>
+                    <footer>
+                        <p class="total"></p>
+                        <button class="btn_eliminar">Eliminar</button>
+                    </footer>
+                </article>
+            </template>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Contáctanos en nuestras redes:</p>
+        <div class="social-icons">
+            <a href="#"><img src="imagen/insta.png" alt="Instagram"></a>
+            <a href="#"><img src="imagen/tikto.png" alt="TikTok"></a>
+            <a href="#"><img src="imagen/facebo.png" alt="Facebook"></a>
+        </div>
+    </footer>
+
+    <script defer src="assets/js/main.js"></script>
+</body>
+</html>
