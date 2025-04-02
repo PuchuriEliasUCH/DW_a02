@@ -85,6 +85,8 @@
 
     // Mostrar ventas
     const mostrarVentas = () => {
+        $ventas.innerHTML = ""
+
         if (ventas.length === 0){
             $ventas.innerHTML = `<h3>Aún no se han registrado ventas</h3>`
         } else {
