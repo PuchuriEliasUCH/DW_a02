@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulador de Venta de Boletos</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css"> <!-- Aquí enlazamos el archivo CSS para darle estilo a la página -->
 </head>
-<body>
-
+<body style="background: url('assets/images/arequipa.jpg') no-repeat center center; background-size: cover;"> <!-- Usamos una imagen de fondo para ambientar la página -->
+    
     <header>
-        <h1>Venta de Boletos de Bus (Lima - Arequipa)</h1>
+        <h1>Venta de Boletos de Bus (Lima - Arequipa)</h1> <!-- Este es el título principal de nuestra página -->
     </header>
     
     <main>
-
         <section>
+            <!-- Aquí tenemos el formulario donde el usuario elige la categoría del boleto y la cantidad que quiere comprar -->
             <form action="#">
                 <div class="form_input">
-                    <label for="categoria">categoría</label> <br />
-                    <select id="categoria">
+                    <label for="categoria">Categoría</label> <br />
+                    <select id="categoria"> <!-- Menú desplegable para elegir qué tipo de boleto comprar -->
                         <option value="1">Económico (S/ 50)</option>
                         <option value="2">Semi-Cama (S/ 70)</option>
                         <option value="3">Cama (S/ 90)</option>
@@ -27,30 +27,29 @@
                 </div>
                 <div class="form_input">
                     <label for="cantidad">Cantidad</label> <br />
-                    <input type="number" id="cantidad" min="1" value="1" required>
+                    <input type="number" id="cantidad" min="1" value="1" required> <!-- Aquí el usuario ingresa cuántos boletos quiere comprar -->
                 </div>
                 <div id="stock" class="form_input">
-                    <p id="stock"></p>
+                    <p id="stock"></p> <!-- En este espacio se va a mostrar cuántos boletos quedan disponibles -->
                 </div>
                 <div class="form_input">
-                    <button type="submit" id="btn_comprar">Comprar Boletos</button>
+                    <button type="submit" id="btn_comprar">Comprar Boletos</button> <!-- Botón para confirmar la compra de boletos -->
                 </div>
             </form>
         </section>
 
-        <section id="ventas">
-
-            <template id="temp_pasajes">
+        <section id="ventas"> <!-- Aquí se van a mostrar las compras que se han realizado -->
+            <template id="temp_pasajes"> <!-- Esta plantilla nos ayuda a mostrar cada compra sin repetir código -->
                 <article>
                     <header>
-                        <h3 class="tipo"></h3>
+                        <h3 class="tipo"></h3> <!-- Se usa para mostrar el número de la venta o cliente -->
                     </header>
                     <main>
-                        <ul class="pasaje"></ul>
+                        <ul class="pasaje"></ul> <!-- En esta lista se detallan los boletos comprados -->
                     </main>
                     <footer>
-                        <p class="total"></p>
-                        <button class="btn_eliminar">Eliminar</button>
+                        <p class="total"></p> <!-- Aquí se muestra el total a pagar por la compra -->
+                        <button class="btn_eliminar">Eliminar</button> <!-- Botón para eliminar la compra si el usuario se arrepiente -->
                     </footer>
                 </article>
             </template>
@@ -59,14 +58,14 @@
     </main>
 
     <footer>
-        <p>Contáctanos en nuestras redes:</p>
-        <div class="social-icons">
-            <a href="#"><img src="imagen/insta.png" alt="Instagram"></a>
-            <a href="#"><img src="imagen/tikto.png" alt="TikTok"></a>
-            <a href="#"><img src="imagen/facebo.png" alt="Facebook"></a>
+        <p>Contáctanos en nuestras redes sociales:</p>
+        <div class="social-icons"> <!-- Sección con iconos de redes sociales para que el usuario nos siga -->
+            <a href="#"><img src="assets/images/logofacebook.png" alt="Facebook"></a>
+            <a href="#"><img src="assets/images/logoinstagram.png" alt="Instagram"></a>
+            <a href="#"><img src="assets/images/logotiktok.png" alt="TikTok"></a>
         </div>
     </footer>
 
-    <script src="assets/js/main-min.js" defer></script>
+    <script src="assets/js/main-min.js" defer></script> <!-- Este es el archivo JavaScript que maneja la lógica del sistema -->
 </body>
 </html>
